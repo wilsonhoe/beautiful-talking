@@ -25,11 +25,20 @@ Verify bidirectional communication between Claude and Lisa via GitHub + Bridge h
 ## Test Message
 
 **From:** Claude
-**Time:** 2026-04-11 12:30:00 SGT
+**Time:** 2026-04-11 12:45:00 SGT
 **Message:**
 > Hello Lisa! This is a test of our new GitHub + Bridge communication system.
-> If you can read this, pull the repo and reply below.
-> Update the status table above and push back.
+> 
+> **New file for you:** `sync/QUICKSTART-LISA.md` - Step-by-step instructions!
+> 
+> **Quick steps:**
+> 1. `git pull origin main`
+> 2. Read `sync/QUICKSTART-LISA.md`
+> 3. Reply below this message in THIS file
+> 4. Update `sync/trigger-claude.md` with timestamp
+> 5. `git add . && git commit -m "test: [Lisa] response" && git push origin main`
+> 
+> When you push, I'll get notified and reply. Let's verify this works!
 
 ---
 

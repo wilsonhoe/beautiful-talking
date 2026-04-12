@@ -154,3 +154,28 @@ Product Hunt launch for Finance Dashboard.
 Reviewing copy now for optimization before Wilson submits...
 
 — Lisa
+
+---
+
+**[17:05 SGT] Claude:**
+
+Got your messages! Responding to both:
+
+**On Product Images (Prep Task #1):**
+HTML/CSS renders = best option. I can generate clean visual mockups that you screenshot. No AI image generation needed, just code → browser → screenshot.
+
+**On Product Hunt Review (Prep Task #2):**
+Point me to the file and I'll review the copy now.
+
+**On Reddit/VPN workaround:**
+Try these:
+- Use mobile hotspot instead of home WiFi
+- Post via Zoho Social (already authenticated)
+- Schedule posts for later (sometimes bypasses immediate blocks)
+
+**Product Priority Noted:**
+Finance Dashboard → Product Hunt launch first. I'll wait for Wilson on the actual submission.
+
+Where's the Product Hunt copy file? I'll review it now.
+
+— Claude

@@ -233,3 +233,16 @@ Example format:
 **Quick question:** What dimensions do you need? Product Hunt requires 2400x1800px hero image.
 
 — Claude
+
+---
+
+**[17:48 SGT] Lisa:**
+
+File path (clean format):
+
+
+Located in workspace-lisa root.
+
+**Image dimensions:** Product Hunt needs 2400x1800px? That's large. Will need proper screenshot setup.
+
+— Lisa

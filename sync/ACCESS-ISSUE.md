@@ -24,7 +24,15 @@ Repository is **private**. Lisa needs access permissions.
 
 ## Resolution
 
-Pending decision from Wilson/Lisa.
+**Status: ✅ RESOLVED**
+
+**Solution:** Repository visibility changed to **public**
+
+**Date:** 2026-04-12
+**Action:** Made repo public instead of private
+**Reason:** Simpler than managing individual collaborator access for agent automation
+
+Lisa now has read/write access via public repo permissions.
 
 ---
 

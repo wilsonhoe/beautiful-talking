@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Finance Dashboard for Freelancers — Track Income, Expenses & Net Worth</title>
+    <meta name="description" content="The all-in-one Notion template for freelancers to track income, expenses, invoices, tax, cash flow, and net worth. One-time payment. Works with free Notion.">
+    <meta name="keywords" content="notion template, finance dashboard, freelance finance, budget tracker, expense tracker, invoice management, tax estimator, net worth tracker, solopreneur tools">
+    <meta property="og:title" content="Notion Finance Dashboard — Freelance Money Tracker">
+    <meta property="og:description" content="Stop using spreadsheets. Track your freelance finances properly with 7 connected databases in Notion. Income, expenses, invoices, tax, cash flow — all in one place.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:url" content="https://wilsonhoe.github.io/notion-finance-dashboard">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notion Finance Dashboard for Freelancers">
+    <meta name="twitter:description" content="7 connected databases. Track income, expenses, invoices, tax, cash flow & net worth. One-time payment.">
+    <meta name="twitter:image" content="assets/twitter-card.png">
+    <link rel="canonical" href="https://wilsonhoe.github.io/notion-finance-dashboard">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            font-size: 1.3em;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hero .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .btn-primary { background: #fff; color: #667eea; }
+        .btn-secondary { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.3); }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .feature-card {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid #334155;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .feature-card:hover { transform: translateY(-3px); border-color: #667eea; }
+        .feature-icon { font-size: 2em; margin-bottom: 15px; }
+        .feature-card h3 { color: #fff; margin-bottom: 10px; font-size: 1.2em; }
+        .feature-card p { color: #94a3b8; font-size: 0.95em; }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .comp-col {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .comp-col h3 { text-align: center; margin-bottom: 20px; font-size: 1.3em; }
+        .comp-bad { border: 2px solid #991b1b; }
+        .comp-bad h3 { color: #ef4444; }
+        .comp-good { border: 2px solid #166534; }
+        .comp-good h3 { color: #10b981; }
+        .comp-col ul { list-style: none; }
+        .comp-col li { padding: 8px 0; font-size: 0.95em; }
+        .comp-col li::before { margin-right: 10px; }
+        .comp-bad li::before { content: "✗"; color: #ef4444; }
+        .comp-good li::before { content: "✓"; color: #10b981; }
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .price-card {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            border: 2px solid #334155;
+            transition: border-color 0.2s;
+        }
+        .price-card:hover { border-color: #667eea; }
+        .price-card.featured { border-color: #667eea; background: linear-gradient(135deg, #1e293b 0%, #2d3a5c 100%); }
+        .price-card .product-name { font-size: 1.1em; color: #94a3b8; margin-bottom: 10px; }
+        .price-card .price { font-size: 2.5em; font-weight: 800; color: #667eea; }
+        .price-card .price-note { font-size: 0.85em; color: #64748b; margin-bottom: 20px; }
+        .price-card ul { list-style: none; text-align: left; margin: 20px 0; }
+        .price-card li { padding: 6px 0; font-size: 0.9em; color: #cbd5e1; }
+        .price-card li::before { content: "✓ "; color: #10b981; }
+        .price-card .btn { display: block; width: 100%; margin-top: 10px; }
+        .guarantee {
+            text-align: center;
+            padding: 40px 20px;
+            background: #1e293b;
+            border-radius: 16px;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        .guarantee .icon { font-size: 3em; margin-bottom: 15px; }
+        .guarantee h3 { color: #fff; margin-bottom: 10px; }
+        .guarantee p { color: #94a3b8; }
+        .faq { margin-top: 40px; }
+        .faq-item { margin-bottom: 20px; }
+        .faq-item summary {
+            background: #1e293b;
+            padding: 15px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #fff;
+            font-size: 1em;
+            list-style: none;
+        }
+        .faq-item summary::before { content: "+ "; color: #667eea; }
+        .faq-item[open] summary::before { content: "− "; }
+        .faq-item .answer {
+            padding: 15px 20px;
+            color: #94a3b8;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+            font-size: 0.85em;
+        }
+        footer a { color: #667eea; text-decoration: none; }
+        .hero-img {
+            max-width: 800px;
+            margin: 30px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .hero-img img { width: 100%; display: block; }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8em; }
+            .hero .subtitle { font-size: 1.1em; }
+            .comparison { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+        }
+        /* Schema markup for rich snippets */
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Notion Finance Dashboard",
+        "applicationCategory": "BusinessApplication",
+        "description": "All-in-one Notion template for freelancers to track income, expenses, invoices, tax, cash flow, and net worth.",
+        "offers": {
+            "@type": "Offer",
+            "price": "39",
+            "priceCurrency": "USD"
+        },
+        "operatingSystem": "Notion",
+        "applicationSubCategory": "Finance Template"
+    }
+    </script>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="badge">🎉 Launch Special — 20% off with code LAUNCH20</div>
+    <h1>Stop Using Spreadsheets.<br>Start Managing Your Freelance Finances Properly.</h1>
+    <p class="subtitle">7 connected databases in Notion. Track income, expenses, invoices, tax, cash flow & net worth. One-time payment. No subscription.</p>
+    <div class="cta-group">
+        <a href="https://lisaquest080.gumroad.com/l/yvsep" class="btn btn-primary">Get Finance Dashboard — $39</a>
+        <a href="https://lisaquest080.gumroad.com/l/xtkjye" class="btn btn-secondary">Get Business Bundle — $59 (save $9)</a>
+    </div>
+    <div class="trust-badges">
+        <div class="trust-badge">✓ Works with FREE Notion</div>
+        <div class="trust-badge">✓ One-time payment</div>
+        <div class="trust-badge">✓ 30-day money-back guarantee</div>
+        <div class="trust-badge">✓ Instant delivery</div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section">
+    <h2>Everything You Need to Manage Your Freelance Money</h2>
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Income & Expense Tracker</h3>
+            <p>Categorize every dollar coming in and going out. See monthly profit at a glance. Filter by category, client, or date.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3>Monthly Budget Planner</h3>
+            <p>Set spending limits for each category. Progress bars show where you stand. Get overspend alerts before it's too late.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>6-Month Cash Flow Forecast</h3>
+            <p>Predict lean months before they happen. Visual charts show your financial trajectory. Plan ahead with confidence.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧾</div>
+            <h3>Invoice Management</h3>
+            <p>Track every invoice: sent, pending, paid. Never lose track of unpaid work again. Set status alerts for overdue payments.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💸</div>
+            <h3>Tax Estimator</h3>
+            <p>Know what you owe BEFORE the bill arrives. Quarterly estimates built in. No more April surprises.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Financial Goals Dashboard</h3>
+            <p>Set savings targets with visual progress bars. Track multiple goals simultaneously. Celebrate wins when you hit milestones.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏦</div>
+            <h3>Net Worth Calculator</h3>
+            <p>See your complete financial picture at a glance. Auto-calculates assets minus liabilities. Watch your net worth grow month over month.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="section">
+    <h2>Why Not This Template Beats Spreadsheets</h2>
+    <div class="comparison">
+        <div class="comp-col comp-bad">
+            <h3>😰 Spreadsheets</h3>
+            <ul>
+                <li>Manual data entry every single month</li>
+                <li>Formulas break when you add rows</li>
+                <li>No invoice tracking — emails get lost</li>
+                <li>Tax season = panic mode</li>
+                <li>Can't forecast cash flow</li>
+                <li>Net worth? Manual calculation</li>
+                <li>Budget = guessing every month</li>
+                <li>Each sheet is disconnected</li>
+            </ul>
+        </div>
+        <div class="comp-col comp-good">
+            <h3>😎 Notion Dashboard</h3>
+            <ul>
+                <li>Pre-built databases — duplicate & go</li>
+                <li>Smart formulas that auto-calculate</li>
+                <li>Invoice tracker with status alerts</li>
+                <li>Tax estimator — know what you owe</li>
+                <li>6-month cash flow forecast built-in</li>
+                <li>Net worth dashboard — auto-updated</li>
+                <li>Budget planner with progress bars</li>
+                <li>7 databases, all interconnected</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="section">
+    <h2>Choose Your Template</h2>
+    <div class="pricing">
+        <div class="price-card">
+            <div class="product-name">Finance Dashboard</div>
+            <div class="price">$39</div>
+            <div class="price-note">One-time payment</div>
+            <ul>
+                <li>7 connected databases</li>
+                <li>Income & Expense Tracker</li>
+                <li>Monthly Budget Planner</li>
+                <li>Cash Flow Forecast</li>
+                <li>Invoice Management</li>
+                <li>Tax Estimator</li>
+                <li>Financial Goals Dashboard</li>
+                <li>Net Worth Calculator</li>
+            </ul>
+            <a href="https://lisaquest080.gumroad.com/l/yvsep" class="btn btn-primary">Get Dashboard</a>
+        </div>
+        <div class="price-card">
+            <div class="product-name">Content Calendar</div>
+            <div class="price">$29</div>
+            <div class="price-note">One-time payment</div>
+            <ul>
+                <li>6 connected databases</li>
+                <li>Content Pipeline Board</li>
+                <li>Weekly Planner</li>
+                <li>Post Templates (4 platforms)</li>
+                <li>Hashtag Bank</li>
+                <li>Engagement Tracker</li>
+                <li>Analytics Dashboard</li>
+            </ul>
+            <a href="https://lisaquest080.gumroad.com/l/vuong" class="btn btn-primary">Get Calendar</a>
+        </div>
+        <div class="price-card featured">
+            <div class="product-name">Business Bundle</div>
+            <div class="price">$59</div>
+            <div class="price-note">Save $9 — One-time payment</div>
+            <ul>
+                <li>Everything in Finance Dashboard</li>
+                <li>Everything in Content Calendar</li>
+                <li>13 connected databases total</li>
+                <li>Complete freelance business system</li>
+                <li>Save $9 vs buying separately</li>
+            </ul>
+            <a href="https://lisaquest080.gumroad.com/l/xtkjye" class="btn btn-primary">Get Bundle — Best Value</a>
+        </div>
+    </div>
+</section>
+
+<!-- Guarantee -->
+<div class="section">
+    <div class="guarantee">
+        <div class="icon">🛡️</div>
+        <h3>30-Day Money-Back Guarantee</h3>
+        <p>If the template doesn't help you manage your freelance finances better, get a full refund. No questions asked.</p>
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<section class="section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        <details class="faq-item">
+            <summary>Do I need a paid Notion account?</summary>
+            <div class="answer">No! The Finance Dashboard works perfectly with Notion's free plan. No paid subscription needed.</div>
+        </details>
+        <details class="faq-item">
+            <summary>How do I set it up?</summary>
+            <div class="answer">After purchase, you'll get a link to duplicate the template into your Notion workspace. All formulas and databases are pre-built — just duplicate and start tracking.</div>
+        </details>
+        <details class="faq-item">
+            <summary>Is this a subscription?</summary>
+            <div class="answer">No, it's a one-time payment. You own the template forever. No monthly fees, no recurring charges.</div>
+        </details>
+        <details class="faq-item">
+            <summary>Can I customize it?</summary>
+            <div class="answer">Absolutely! Since it's a Notion template, you can modify everything — add properties, change views, adjust formulas, or rename categories to fit your workflow.</div>
+        </details>
+        <details class="faq-item">
+            <summary>What if I'm not happy with it?</summary>
+            <div class="answer">We offer a 30-day money-back guarantee. If the template doesn't meet your expectations, request a full refund — no questions asked.</div>
+        </details>
+        <details class="faq-item">
+            <summary>Who is this for?</summary>
+            <div class="answer">Freelancers, solopreneurs, side-hustlers, and small business owners who want to track their finances in one place without paying for expensive accounting software.</div>
+        </details>
+        <details class="faq-item">
+            <summary>Does it work on mobile?</summary>
+            <div class="answer">Yes! Notion works on iOS, Android, Mac, Windows, and web. Your finance data syncs across all devices automatically.</div>
+        </details>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="hero" style="padding: 60px 20px;">
+    <h2>Ready to Take Control of Your Freelance Finances?</h2>
+    <p class="subtitle">Stop guessing. Start knowing. One template, one payment, forever yours.</p>
+    <div class="cta-group">
+        <a href="https://lisaquest080.gumroad.com/l/yvsep" class="btn btn-primary">Get Finance Dashboard — $39</a>
+        <a href="https://lisaquest080.gumroad.com/l/xtkjye" class="btn btn-secondary">Get Business Bundle — $59 (save $9)</a>
+    </div>
+    <p style="margin-top: 20px; color: rgba(255,255,255,0.7); font-size: 0.9em;">🎁 Use code LAUNCH20 for 20% off</p>
+</section>
+
+<footer>
+    <p>Notion Finance Dashboard &copy; 2025 | <a href="https://lisaquest080.gumroad.com/">Gumroad Store</a> | <a href="mailto:lisamolbot@gmail.com">Contact</a></p>
+    <p>Built for freelancers, by freelancers.</p>
+</footer>
+
+</body>
+</html>

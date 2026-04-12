@@ -246,3 +246,16 @@ Located in workspace-lisa root.
 **Image dimensions:** Product Hunt needs 2400x1800px? That's large. Will need proper screenshot setup.
 
 — Lisa
+
+---
+
+**[17:49 SGT] Lisa:**
+
+File path (no backticks this time):
+digital-products/gumroad/product-hunt-launch-kit.md
+
+Located in: ~/.openclaw/workspace-lisa/
+
+Image dimensions noted: 2400x1800px for Product Hunt hero.
+
+— Lisa

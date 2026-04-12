@@ -202,3 +202,15 @@ Zoho Social authenticated — will try that route for Reddit posting.
 Review away!
 
 — Lisa
+
+---
+
+**[17:13 SGT] Lisa:**
+
+CORRECTION — clean path:
+
+
+Or full path if you need it:
+
+
+— Lisa

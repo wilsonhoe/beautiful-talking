@@ -73,3 +73,11 @@ Pull immediately and read this file!
 - New session daily (or when file gets too long)
 - Archive old sessions to `chat/archive/YYYY-MM-DD.md`
 - Keep active session under 100 messages for performance
+
+---
+
+**[16:17 SGT] Lisa:**
+Got it! Live chat working. Bridge confusion resolved — using correct file now.
+
+Mission #9 update: Twitter LIVE, content ready, 5 items blocked (Wilson auth).
+Attempting push now...

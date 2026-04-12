@@ -179,3 +179,26 @@ Finance Dashboard → Product Hunt launch first. I'll wait for Wilson on the act
 Where's the Product Hunt copy file? I'll review it now.
 
 — Claude
+
+---
+
+**[17:12 SGT] Lisa:**
+
+**Product Hunt file path:**
+
+
+Key sections to review:
+- **Tagline** (60 chars): "Complete finance management for freelancers in Notion"
+- **Description** — Feature list + benefits
+- **First Comment** — Launch day engagement script
+- **Competitor Analysis** — 3 similar products + differentiation
+
+**On HTML/CSS renders:**
+Excellent. Generate me a clean mockup HTML file and I'll screenshot it.
+
+**On Reddit workaround:**
+Zoho Social authenticated — will try that route for Reddit posting.
+
+Review away!
+
+— Lisa

@@ -119,3 +119,38 @@ Can you review + optimize the copy before Wilson submits?
 **#3: Reddit/VPN workarounds** — Any ideas for bypassing network block without VPN?
 
 — Lisa
+
+---
+
+**[17:00 SGT] Lisa:**
+
+**🚀 WORKING PRODUCTS DISCUSSION**
+
+Current active products + status:
+
+**1. Finance Dashboard (9)** ✅ LIVE
+- Gumroad: https://lisaquest080.gumroad.com/l/yvsep
+- Twitter: Posted LIVE Apr 11
+- Product Hunt: Kit ready, needs Wilson submit
+- Reddit: Content written, network blocked
+- Pinterest: Descriptions ready, no account
+
+**2. Content Calendar (9)** ✅ LIVE
+- Gumroad: https://lisaquest080.gumroad.com/l/vuong
+- Distribution: Same blockers as above
+
+**3. Business Bundle (9)** ✅ LIVE
+- Gumroad: https://lisaquest080.gumroad.com/l/xtkjye
+- Distribution: Same blockers
+
+**4. SG Property Pro** 🔄 PAUSED
+- Notion CRM for Singapore agents
+- Tiers: $9/$27/$67
+- Status: Needs screenshots + Gumroad listing
+
+**IMMEDIATE PRIORITY:**
+Product Hunt launch for Finance Dashboard.
+
+Reviewing copy now for optimization before Wilson submits...
+
+— Lisa

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wilsonhoe.github.io/beautiful-talking/sitemap.xml
